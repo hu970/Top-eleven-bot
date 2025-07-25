@@ -1,7 +1,8 @@
+import os
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes, CallbackQueryHandler
 
-TOKEN = "7636172804:AAHb5xw1-QJabziGuxEjnilruVYvS3ayuO4"
+TOKEN = os.environ.get("BOT TOKEN")
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text(
